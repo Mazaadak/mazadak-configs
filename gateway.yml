@@ -1,6 +1,6 @@
+sever:
+  port: 18090
+
 spring:
   config:
     import: "common-config.yml"
-
-sever:
-  port: 18090
