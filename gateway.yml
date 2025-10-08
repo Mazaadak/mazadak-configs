@@ -1,4 +1,4 @@
-sever:
+server:
   port: 18090
 
 spring:
