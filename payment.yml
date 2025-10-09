@@ -1,27 +1,36 @@
 spring:
   profiles:
     active: "default"
+  config:
+    import: "configserver:http://localhost:18071/"
+
+  datasource:
+    url: "jdbc:h2:mem:testdb"
+    driverClassName: org.h2.Driver
+    username: sa
+    password: "{cipher}fe92bc4b65fc46a56c836d5b66fe27e46c0a89420cc1a265a8c1ac3c72c94227"
+
+    rabbitmq:
+      host: "localhost"
+      port: 5672
+      username: "guest"
+      password: "guest"
+
+server:
+  port: 18081
 
 stripe:
   api:
-    secret-key: sk_test_51SE48THRWMzXfAFedGPQ02RwkGnexkJXFeFi6ckainh6NN2dEcGt1if7C8ZqHeRBTbiUmJCaPBibr6nQsgLp5ena00X7YwcW11
-    client-id: ca_TAak0BWyIkV04HPOSCWKapGXV2D3VEPU
+    secret-key: "{cipher}46ee8f7505eaf702700b8f0e95428d99a90e150cb9d6b78b8a90bd64171385b7a5905b4f4d956c44e77bee1d4ff5e53edb09b9fa24b7337f5decc1e28edb9bc5d43193a987b759e41844a55833965eade7815af91a6e4058d20b79a1c93d1fb5a1378703121564c951c3bcbed52ca9c357a15c4da98fc458fd5f3c2e0ddfac9c"
+    client-id: "{cipher}5855e83c282d6a83fd2cfc62d02b9d24f923873e4c4a58105e382bd8efbc2d2fad235b3c2762aa407e7b712e020998383c2711e186f1c2f7f84b642e1591cecb"
 
-seller:
-  service:
-    url: http://localhost:8082
 
-onboarding:
-  redirect-uri: "http://localhost:8081/api/onboarding/oauth/callback"
-
-server:
-  port: 8081
 
 eureka:
   instance:
-    hostname: localhost
+    preferIpAddress: true
   client:
-    fetchRegistry: false
-    registerWithEureka: false
+    fetchRegistry: true
+    registerWithEureka: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://localhost:18050/eureka/
