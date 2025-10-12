@@ -1,0 +1,8 @@
+spring:
+  config:
+    import: "common-config.yml"
+  datasource:
+    url: jdbc:postgresql://localhost:15432/cartdb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
