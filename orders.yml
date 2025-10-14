@@ -1,0 +1,6 @@
+server:
+  port: 18088
+
+spring:
+  config:
+    import: "common-config.yml"
