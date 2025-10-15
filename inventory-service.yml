@@ -1,6 +1,17 @@
+app:
+  reservation:
+    timeout-minutes: 10
+    cleanup-interval-ms: 300000
+
+
 server:
   port: 18089
 
 spring:
   config:
     import: "common-config.yml"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/inventory_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver    
