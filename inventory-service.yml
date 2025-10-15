@@ -11,7 +11,7 @@ spring:
   config:
     import: "common-config.yml"
   datasource:
-    url: jdbc:postgresql://localhost:5432/inventory_db
+    url: jdbc:postgresql://localhost:15439/inventory_db
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver    
