@@ -5,7 +5,7 @@ app:
 
 
 server:
-  port: 18089
+  port: 18085
 
 spring:
   config:

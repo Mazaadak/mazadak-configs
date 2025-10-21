@@ -1,3 +1,6 @@
 spring:
   config:
     import: "common-config.yml"
+
+server:
+  port: 18086
