@@ -1,0 +1,20 @@
+server:
+  port: 18180
+spring:
+  config:
+    import: "common-config.yml"
+  datasource:
+    url: jdbc:postgresql://localhost:5452/postgres
+    username: postgres
+    password: test
+    driver-class-name: org.postgresql.Driver
+cloudinary:
+  cloud_name: duxy33jie
+  api_key: 682696719189626
+  api_secret: E8q1r-Jlv6IF0h_VkfS40z3oT8g
+#Jwt Config
+jwt.secret: ${JWT_SECRET:7b5df3c65c867a1ce70ff7b06ae2025c1f6d1d9fbcca48fca5a7345567dba8e4}
+jwt.expiration: ${JWT_EXPIRATION:86400000}
+#Refresh Token Config
+refresh.token.expiration: ${REFRESH_TOKEN_EXPIRATION:604800000}
+
