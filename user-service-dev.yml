@@ -18,3 +18,6 @@ jwt.expiration: ${JWT_EXPIRATION:86400000}
 #Refresh Token Config
 refresh.token.expiration: ${REFRESH_TOKEN_EXPIRATION:604800000}
   
+logging:
+  level:
+    org.springframework.security: TRACE
