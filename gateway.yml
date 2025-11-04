@@ -6,8 +6,10 @@ spring:
     import: "common-config.yml"
   data:
     redis:
+      connect-timeout: 2s
       host: ${SPRING_DATA_REDIS_HOST:localhost}
       port: ${SPRING_DATA_REDIS_PORT:6379}
+      timeout: 1s
   cloud:
     gateway:
       server:
