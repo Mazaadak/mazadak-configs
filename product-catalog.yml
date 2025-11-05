@@ -3,3 +3,8 @@ spring:
     import: "common-config.yml"
 server:
   port: 18086
+
+cloudinary:
+  cloud_name: duxy33jie
+  api_key: 682696719189626
+  api_secret: E8q1r-Jlv6IF0h_VkfS40z3oT8g
