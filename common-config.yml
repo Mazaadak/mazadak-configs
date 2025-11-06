@@ -28,3 +28,8 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:18050/eureka/
+
+mazadak:
+  exception:
+    handler:
+      enabled: true
