@@ -2,11 +2,11 @@ spring:
   config:
     import: "common-config.yml"
 
-  datasource:
-    url: "jdbc:h2:mem:testdb"
-    driverClassName: org.h2.Driver
-    username: sa
-    password: "{cipher}fe92bc4b65fc46a56c836d5b66fe27e46c0a89420cc1a265a8c1ac3c72c94227"
+#  datasource:
+#    url: "jdbc:h2:mem:testdb"
+#    driverClassName: org.h2.Driver
+#    username: sa
+#    password: "{cipher}fe92bc4b65fc46a56c836d5b66fe27e46c0a89420cc1a265a8c1ac3c72c94227"
 
 server:
   port: 18081
