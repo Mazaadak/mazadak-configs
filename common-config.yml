@@ -28,3 +28,7 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:18050/eureka/
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
