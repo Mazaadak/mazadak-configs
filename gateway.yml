@@ -120,11 +120,3 @@ resilience4j:
       default-circuit-breaker:
         base-config: default
         timeout-duration: 5s
-
-management:
-  tracing:
-    enabled: true
-    sampling:
-      probability: 1.0
-    propagation:
-      type: w3c
