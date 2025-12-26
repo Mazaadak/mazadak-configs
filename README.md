@@ -7,7 +7,7 @@
 - This repository is the single source of truth for application properties, database connections, Kafka topics, and other service configurations across the platform.
 
 ## Configuration Files
-- Each service's configuration file should be named `{spring.application.name}.yml` for it to be loaded.
+- Each service's configuration file should be named `{spring.application.name}-{profile}.yml` for it to be loaded, not having the `{profile}` part will register it with the default profile.
 
 ## Usage
 The Config Server automatically pulls these configuration files from this repository. Services retrieve their configuration from the Config Server at startup using:
